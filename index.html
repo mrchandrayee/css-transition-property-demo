@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090d1c">
+  <title>CSS Transition Property with &amp; without</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <h1>CSS Transition Property<br>with &amp; without</h1>
+    </header>
+
+    <section class="comparison" aria-label="Compare cards with and without CSS transitions">
+      <article class="example without">
+        <h2><span aria-hidden="true">❌</span> Without Transition</h2>
+        <div class="mountain-card">
+          <img src="assets/mountain-road.jpg" alt="Winding road through red rocky mountains">
+          <div class="card-content">
+            <h3>Beautiful Mountains</h3>
+            <p>Hover this card. Everything changes immediately without animation.</p>
+            <button type="button">Explore</button>
+          </div>
+        </div>
+        <div class="code-panel code-red">
+          <pre><code>.card:hover {
+  transform: translateY(-18px);
+  box-shadow: 0 30px 60px rgba(0,0,0,.35);
+}</code></pre>
+        </div>
+      </article>
+
+      <article class="example with">
+        <h2><span aria-hidden="true">✅</span> With Transition</h2>
+        <div class="mountain-card">
+          <img src="assets/mountain-road.jpg" alt="Winding road through red rocky mountains">
+          <div class="card-content">
+            <h3>Beautiful Mountains</h3>
+            <p>Hover this card. Every property animates smoothly.</p>
+            <button type="button">Explore</button>
+          </div>
+        </div>
+        <div class="code-panel code-green">
+          <pre><code>.card {
+  transition: transform 0.45s ease,
+              box-shadow 0.45s ease;
+}
+
+.card:hover {
+  transform: translateY(-18px);
+  box-shadow: 0 30px 60px rgba(0,0,0,.35);
+}</code></pre>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
